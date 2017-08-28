@@ -1,13 +1,16 @@
-<h1>Hello World</h1>
-<p>Sherlynn's Blog app page</p>
+<div class="main">
+  <div class="container">
+    <h1>This is Sherlynn's HOME page</h1>
+
+    <h3>This site has 3 route pages:</h3>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>New</li>
+    </ul>
 
 
-<% (1..10).each do |num| %>
-<%= num %>
-<div>
-
+    <%= link_to("Go to the ABOUT Page", {:action=> "about"})%> <br>
+    <%= link_to("Create a NEW Blogpost", {:action=> "new"})%>
+  </div>
 </div>
-
-<% end %>
-<a href="<%=about_path%>"> About Page </a>
-<%= link_to "About Page" %> 
