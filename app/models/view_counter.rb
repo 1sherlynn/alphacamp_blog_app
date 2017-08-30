@@ -1,0 +1,6 @@
+class ViewCounter < ApplicationRecord
+
+
+
+
+end
