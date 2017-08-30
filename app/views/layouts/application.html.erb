@@ -2,13 +2,28 @@
 <html>
   <head>
     <title>AlphacampBlogApp</title>
-    <%= csrf_meta_tags %>
+    <%= csrf_meta_tags %> <!-- method call-->
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- method call which takes in a string and a hash. application means we have a application css file-->
+
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1> Sherlynn's Blog Application</h1>
+
+        </div>
+      </div>
+
+    </div>
+    <%= yield %> <!-- layout yield for view-->
+
+
   </body>
 </html>

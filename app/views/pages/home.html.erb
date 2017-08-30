@@ -1,16 +1,19 @@
-<div class="main">
-  <div class="container">
-    <h1>This is Sherlynn's HOME page</h1>
 
-    <h3>This site has 3 route pages:</h3>
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>New</li>
-    </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="section-heading">This is Sherlynn's HOMEpage</h2>
+            <h3>This site has 3 route pages:</h3>
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>New</li>
 
+              <%= link_to("Go to the ABOUT Page", {:action=> "about"})%> <br>
+              <%= link_to("Create a NEW Blogpost", {:action=> "new"})%>
+            </ul>
+          </div>
+        </div>
 
-    <%= link_to("Go to the ABOUT Page", {:action=> "about"})%> <br>
-    <%= link_to("Create a NEW Blogpost", {:action=> "new"})%>
-  </div>
-</div>
+      </div>
+    
