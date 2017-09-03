@@ -2,18 +2,21 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h2 class="section-heading">This is Sherlynn's HOMEpage</h2>
-            <h3>This site has 3 route pages:</h3>
+            <h1>This is the ABOUT page</h1>
+            
+            <h3>Go to other pages:</h3>
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>New</li>
-
-              <%= link_to("Go to the ABOUT Page", {:action=> "about"})%> <br>
-              <%= link_to("Create a NEW Blogpost", {:action=> "new"})%>
+              <li><%= link_to("About", {:action=> "about"})%></li>
+              <li><%= link_to("New", {:action=> "new"})%></li>  
             </ul>
+
+            <br>
+
+            <p><strong><%= "#{@counter.view_count}"%> Views </strong></p>
+
           </div>
         </div>
 
       </div>
-    
+
+

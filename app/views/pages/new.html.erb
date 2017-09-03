@@ -3,17 +3,17 @@
 
 <h1>This is the NEW page</h1>
 
-<h3>This site has 3 route pages:</h3>
+<h3>Link to other pages:</h3>
 <ul>
-  <li>Home</li>
-  <li>About</li>
-  <li>New</li>
+  <li><%= link_to("Home", {:action=> "home"})%> </li>
+  <li><%= link_to("About", {:action=> "about"})%></li>
+ 
 </ul>
 
 
-
-<%= link_to("Back to the HOME Page", {:action=> "home"})%> <br>
-<%= link_to("Go to the ABOUT Page", {:action=> "about"})%>
+<br>
+<br>
+<p><strong><%= "#{@counter.view_count}"%> Views </strong></p>
 
 </div>
 </div>
