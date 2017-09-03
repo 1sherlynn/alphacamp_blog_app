@@ -1,10 +1,17 @@
 <h1>Edit post</h1>
  
+
+
 <%= form_for @post, url: post_path do |f| %>
-  
-  <p>
+
+ <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
   </p>
  
   <p>
@@ -15,7 +22,10 @@
   <p>
     <%= f.submit %>
   </p>
- 
+
+
 <% end %>
- 
-<%= link_to 'Back', posts_path %>
+
+<br>
+<br>
+<%= link_to 'Back', posts_path, class: 'btn btn-warning' %>
