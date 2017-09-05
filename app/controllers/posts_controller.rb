@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
+       flash[:notice] = 'Post was successfully created.'
         redirect_to @post
       else
         render 'new'
@@ -14,6 +15,7 @@ class PostsController < ApplicationController
 
   def show
       @post = Post.find(params[:id])
+      @comment = @post.comments.new
   end
 
   def index
@@ -27,6 +29,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
+      flash[:notice] = "Post has been successfully updated."
       redirect_to @post
     else
       render 'edit'
@@ -36,7 +39,9 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
+    flash[:notice] = "Post has been successfully destroyed."
     redirect_to posts_path
+    
   end
    
    private

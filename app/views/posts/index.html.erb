@@ -19,12 +19,17 @@
       <td><%= post.author %></td>
       <td><%= post.text %></td>
       <td><%= post.created_at %></td>
+
       <td><%= link_to 'Show', post_path(post), class: 'btn btn-success btn-xs' %></td>
+
+
       <td><%= link_to 'Edit', edit_post_path(post), class: 'btn btn-info btn-xs' %></td>
+
+
       <td><%= link_to 'Destroy', post_path(post),
       class: 'btn btn-danger btn-xs',
               method: :delete,
-              data: { confirm: 'Sure you wanna destroy?'} %></td>
+              data: { confirm: 'Sure you wanna destroy?'} %> </td>
     </tr>
   <% end %>
   </tbody>
@@ -32,4 +37,9 @@
 </table>
 
 <br>
-<%= link_to 'New Post', new_post_path, class: 'btn btn-warning' %>
+<%= link_to new_post_path, class: 'btn btn-warning' do %>
+ <i class="glyphicon glyphicon-plus"></i> New Post
+<% end %>
+
+
+
