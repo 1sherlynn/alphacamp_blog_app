@@ -21,9 +21,22 @@
         </div>
       </div>
 
-    
 
-    <p style="color: green"><%= flash[:notice] %></p>
+   
+
+    <div>
+      <% flash.each do |key, value| %>
+        <% key %>
+        <div class="alert alert-info" role="alert"> <%= value %> </div>
+      <% end %>
+    </div>
+
+
+
+
+
+
+
     <%= yield %> <!-- layout yield for view-->
 
 

@@ -1,0 +1,33 @@
+$( document ).ready(function() {
+  $('#second-para').css('color', 'red')
+});
+
+
+
+jQuery(document).ready(function(){
+    $('.glyphicon-heart').on("click", function(){
+    
+    	if ($('.glyphicon-heart').css("color") == 'rgb(255, 0, 0)') 
+    	{
+    		$('.glyphicon-heart').css("color", "black") 
+    	} else {
+    		$('.glyphicon-heart').css("color", "red") 
+    	}
+      
+    });
+
+   });
+
+$(document).ready(function(){
+    var count = 1;
+    var element = document.getElementsByClassName("updateCount")[0];
+    $('.glyphicon-heart').on("click", function(){
+      console.log(count++);
+	  document.getElementsByClassName("updateCount")[0].innerHTML = "<b>"+count+" </b>";
+      <!-- console.log('Thanks for clicking me ' + count + ' times!'); -->
+      <!-- count++; -->
+    });
+});
+
+$("p#first-para").html("Hello World!");
+

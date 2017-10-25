@@ -1,0 +1,47 @@
+<div class="col-md-10 col-md-offset-1">
+	<div class="table-responsive">
+	  <table class="table table table-hover">
+
+		<h1><%= @student.name %></h1>
+
+		    <thead>
+		      <tr>
+		      	<th>Name</th>
+		        <th>Birthdate</th>
+		        <th>Email</th>
+		        <th>Created Date</th>
+		      </tr>
+		    </thead>
+
+		    <tbody>
+		      <tr>
+		      	<td><%= @student.name %></td>
+		        <td><%= @student.birthdate %></td>
+		        <td><%= @student.email %></td>
+		        <td><%= @student.created_at.strftime("%d %b %Y %A, %I:%S %p") %></td>
+		      </tr>
+		    </tbody>
+		  
+	  </table>
+	</div>
+
+
+
+	<div class="col-md-4 col-md-offset-4">
+		<button type="button" class="btn btn-warning btn-lg">
+			<%= link_to "Back", root_path %> 
+		</button>
+		<button type="button" class="btn btn-warning btn-lg">
+			<%= link_to "Edit", edit_student_path(@student) %> 
+		</button>
+		<button type="button" class="btn btn-warning btn-lg">
+			<%= link_to "Delete", student_path(@student), 
+			method: :delete, 
+			data: {confirm: "Sure you wanna destroy this record?"} %> 
+		</button>
+
+
+		<br>
+	</div>
+	
+</div>
